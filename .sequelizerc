@@ -1,0 +1,22 @@
+const path = require('path');
+
+module.exports = {
+    //config để tạo các folder model, migrations, seeders
+    //câu lệnh chạy ở terminal để tạo folder: node_modules/.bin/sequelize init
+
+    // Trong Node.js, thư mục "seeders" thường được sử dụng để chứa các tệp tin mã 
+    // Javascript để khởi tạo hoặc đưa dữ liệu mẫu vào cơ sở dữ liệu. Các tệp tin seeders này 
+    // thường được sử dụng trong quá trình phát triển và kiểm thử ứng dụng, và không nên được sử dụng trong môi trường sản phẩm.
+
+    // Ví dụ, trong một ứng dụng sử dụng cơ sở dữ liệu MySQL, 
+    // thư mục seeders có thể chứa các tệp tin mã để khởi tạo bảng hoặc đưa dữ liệu mẫu vào các bảng đã có trong cơ sở dữ liệu. 
+    // Việc sử dụng seeders có thể giúp tiết kiệm thời gian khi phát triển và kiểm thử ứng dụng, 
+    // cũng như đảm bảo tính nhất quán của dữ liệu trong quá trình phát triển.
+
+    // Seeders thường được sử dụng trong kết hợp với các framework hoặc
+    //  thư viện ORM như Sequelize để quản lý cơ sở dữ liệu trong Node.js.
+    'config': path.resolve('./src/config', 'config.json'),
+    'migrations-path': path.resolve('./src', 'migrations'),
+    'models-path': path.resolve('./src', 'models'),
+    'seeders-path': path.resolve('./src', 'seeders')
+}
