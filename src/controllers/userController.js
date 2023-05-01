@@ -52,7 +52,7 @@ let handleEditUser = async (req, res) => {
     if(!data.id){
         return res.status(200).json({
             errCode : 1,
-            message : "Missing required parameter!"
+            errMessage : "Missing required parameter!"
         })
     }
     let message = await userService.editUser(data)
